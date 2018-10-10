@@ -1,0 +1,63 @@
+.download {
+  background-color: #2b3b4b;
+  background-image: url("../img/back-mobile@1x.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.download__link {
+  display: block;
+  width: 280px;
+  height: 100px;
+  outline: 2px solid gold;
+}
+.download__list {
+  width: 280px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 90px;
+  outline: 2px solid blue;
+}
+.download__description {
+  width: 280px;
+  padding: 0;
+  margin: 0;
+  display: block;
+  height: 81px;
+  outline: 2px solid green;
+}
+@media (min-width: 660px) {
+  .download {
+    background-image: url("../img/back-tablet@1x.jpg");
+  }
+  .download__link {
+    width: 300px;
+  }
+  .download__list {
+    width: 300px;
+  }
+  .download__description {
+    width: 300px;
+  }
+}
+@media (min-width: 1200px) {
+  .download {
+    margin-top: -110px;
+    background-image: url("../img/back-desktop.jpg");
+    background-size: cover;
+  }
+  .bownload__slogan {
+    display: block;
+    padding-top: 200px;
+  }
+  .download__link {
+    min-height: 110px;
+  }
+  .download__list {
+    min-height: 120px;
+  }
+  .download__description {
+    min-height: 85px;
+  }
+}

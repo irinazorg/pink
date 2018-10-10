@@ -1,0 +1,17 @@
+body {
+  background: #fff url("../img/pink-index-mobile.jpg") no-repeat 50% 0;
+  background-size: 320px auto;
+  min-height: 2200px;
+}
+@media (min-width: 660px) {
+  body {
+    background: #fff url("../img/pink-index-tablet.jpg") no-repeat 50% 0;
+    background-size: 660px auto;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    background: #fff url("../img/pink-index-desktop.jpg") no-repeat 50% 0;
+    background-size: 1200px auto;
+  }
+}

@@ -1,0 +1,31 @@
+@media (max-width: 1199px) {
+  .main-nav {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .main-nav--closed {
+    display: none;
+  }
+  .main-nav--opened {
+    display: block;
+  }
+}
+@media (min-width: 660px) {
+  .main-nav__list {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .main-nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 625px;
+  }
+}

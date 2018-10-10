@@ -1,0 +1,26 @@
+@bg-white: #fff;
+@bg-lightgrey: #f8f5f2;
+@tablet-width: 660px;
+@desktop-width: 1200px;
+
+body {
+  background: @bg-white url("../img/pink-index-mobile.jpg") no-repeat 50% 0;
+  background-size: 320px auto;
+  min-height: 2200px;
+}
+
+
+@media (min-width: @tablet-width) {
+  body {
+    background: @bg-white url("../img/pink-index-tablet.jpg") no-repeat 50% 0;
+    background-size: 660px auto;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  body {
+    background: @bg-white url("../img/pink-index-desktop.jpg") no-repeat 50% 0;
+    background-size: 1200px auto;
+  }
+}
