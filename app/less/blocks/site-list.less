@@ -3,11 +3,9 @@
 @mobile-tablet-width-only: 1199px;
 
 .site-list {
-  margin: 0;
   padding: 0;
+  margin: 0;
   list-style: none;
-  font-weight: bold;
-  text-align: center;
 }
 
 .site-list a {
@@ -19,6 +17,7 @@
   text-transform: uppercase;
   color: #fff;
   text-decoration: none;
+  text-align: center;
 
   background-color: #283645;
   border-top: 1px solid #485461;
@@ -42,13 +41,47 @@
 
 @media (min-width: @desktop-width) {
   .site-list a {
+    position: relative;
     border: none;
     box-shadow: none;
     background-color: transparent;
+    font-weight: 300;
+    font-size: 18px;
+    text-transform: none;
+    padding: 0;
+    padding-top: 38px;
+    padding-bottom: 40px;
 
     &[href]:hover {
       background-color: transparent;
       color: #d22856;
+    }
+
+    &[href]:active {
+      background-color: transparent;
+      color: rgba(255, 255, 255, 0.3);
+    }  
+  }
+
+  .site-list__item {
+    margin-right: 85px;
+  }
+
+  .site-list__item:last-child {
+    margin-right: 0;
+  }
+
+  .site-list__item--active {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 35px;
+      left: 0;
+      height: 2px;
+      background-color: #fff;
     }
   }
 }

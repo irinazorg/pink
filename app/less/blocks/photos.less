@@ -1,0 +1,241 @@
+@tablet-width: 660px;
+@desktop-width: 1200px;
+
+
+.photos__description {
+  padding-top: 50px;
+  padding-bottom: 55px;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #283645;
+  text-align: center;
+}
+
+.photos__list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.photos__item {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #283645;
+}
+
+.photos__item--panorama-wrap {
+  position: relative;
+
+  &::before {
+    content: "Панорама дня";
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #d22856;
+    padding: 10px 20px;
+  }
+}
+
+.photo__link img  {
+  width: 100%;
+  height: auto;
+}
+
+.photos__info-wrap {
+  box-sizing: border-box;
+  width: 280px;
+  padding: 23px 17px;
+  margin: 0 auto;
+  margin-top: -7px;
+  margin-bottom: 27px;
+  background-color: #f2f2f2;
+}
+
+.photos__img {
+  display: block;
+  width: 280px;
+  height: 180px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.photos__author {
+  font-weight: 700;
+  font-style: normal; 
+}
+
+.photos__time {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 300;
+
+  &--panorama {
+    font-weight: 400;
+  }
+}
+
+.photos__text {
+  padding: 0;
+  margin: 0;
+}
+
+.photos__likes-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10px;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+.photos__like-btn {
+  display: block;
+  outline: none;
+  border: none;
+  width: 13px;
+  height: 12px;
+  cursor: pointer;
+  background-image: url("../img/heart.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 13px 12px;
+  padding-top: 6px;
+  padding-bottom: 5px;
+  padding-right: 19px;
+}
+
+.photos__likes-amount {
+  padding: 0;
+  margin: 0;
+  color: #d43560;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .photos__description {
+    width: 500px;
+    padding-top: 95px;
+    padding-bottom: 81px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 300;
+  }
+
+  .photos__info-wrap {
+    position: relative;
+    width: 300px;
+    height: 155px;
+    padding: 16px 27px;
+  }
+
+  .photos__likes-wrap {
+    position: absolute;
+    flex-direction: row-reverse;
+    bottom: 15px;
+    width: 250px;
+    justify-content: space-between;
+  }
+
+  .photos__like-btn {
+    padding: 0;
+  }
+
+  .photos__likes-amount {
+    display: block;
+    order: 10;
+  }
+
+  .photos__item--panorama-wrap::before {
+    top: 57px;
+  }
+
+  .photos__info-wrap--panorama {
+    box-sizing: border-box;
+    width: 620px;
+    height: 121px;
+    position: relative;
+    padding: 15px 27px;
+    margin-top: -9px;
+    margin-bottom: 27px;
+    background-color: #f2f2f2;
+  }
+
+  .photos__likes-wrap--panorama {
+    position: absolute;
+    width: 115px;
+    right: 27px;
+    bottom: 77px;
+  }
+
+  .photos__likes-wrap--panorama .photos__like-btn {
+    padding: 0;
+    padding-left: 20px;
+  }
+
+  .photos__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .photos__item {
+    margin-right: 20px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  .photos__item--panorama {
+    margin-right: 0;
+  }
+
+  .photos__text {
+    font-weight: 300;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photos__description  {
+    width: 550px;
+  }  
+
+  .photos__item--panorama-wrap::before {
+    top: 54px;
+    right: 130px;
+  }
+
+  .photos__item--panorama .photos__info-wrap--panorama {
+    width: 940px;
+  }
+
+  .photos__item--panorama .photos__info-wrap--panorama {
+    padding-top: 30px;
+  }
+
+  .photos__item--panorama .photos__likes-wrap--panorama {
+    bottom: 63px;
+  }
+
+  .photos__item {
+    margin-right: 20px;
+
+    &:nth-child(2n) {
+      margin-right: 20px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}

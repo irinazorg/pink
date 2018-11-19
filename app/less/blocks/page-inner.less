@@ -1,0 +1,35 @@
+@tablet-width: 660px;
+@desktop-width: 960px;
+
+.page-inner__header {
+  background-color: #2c394a;
+  background-image: url("../img/bg-back-tablet@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+
+  @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+    background-image: url("../img/bg-back-tablet@2x.jpg");
+  }
+}
+
+.page-inner__title {
+  margin: 0;
+  padding-top: 35px;
+  padding-bottom: 85px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .page-inner__title {
+    display: block;
+    padding-top: 80px;
+    padding-bottom: 145px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}

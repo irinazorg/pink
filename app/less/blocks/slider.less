@@ -1,0 +1,113 @@
+@tablet-width: 660px;
+@desktop-width: 1200px;
+@mobile-tablet-width-only: 1199px;
+
+.slider {
+  position: relative;
+  min-height: 260px;
+}
+
+.slider__radio {
+  position: absolute;
+  opacity: 0;
+}
+
+.slider__toggles {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+  list-style: none;
+}
+
+.slider__toggle {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 7px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background-color: #bec2c7;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.slider__toggle-checked {
+  background-color: #fff;
+  border-color: #283645;
+}
+
+.slider__radio-1:hover ~ .slider__toggles .slider__toggle[for="btn-1"],
+.slider__radio-2:hover ~ .slider__toggles .slider__toggle[for="btn-2"],
+.slider__radio-3:hover ~ .slider__toggles .slider__toggle[for="btn-3"] {
+  background-color: #7e868f;
+}
+
+.slider__radio-1:active ~ .slider__toggles .slider__toggle[for="btn-1"],
+.slider__radio-2:active ~ .slider__toggles .slider__toggle[for="btn-2"],
+.slider__radio-3:active ~ .slider__toggles .slider__toggle[for="btn-3"] {
+  background-color: rgba( 126, 134, 143, 0.1);
+}
+
+.slider__radio-1:checked ~ .slider__toggles .slider__toggle[for="btn-1"],
+.slider__radio-2:checked ~ .slider__toggles .slider__toggle[for="btn-2"],
+.slider__radio-3:checked ~ .slider__toggles .slider__toggle[for="btn-3"] {
+  background-color: #fff;
+  border-color: #283645;
+}
+
+.slider__item {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider__radio-1:checked ~ .slider__list .slider__item:nth-child(1) {
+  display: block;
+}
+
+.slider__radio-2:checked ~ .slider__list .slider__item:nth-child(2) {
+  display: block;
+}
+
+.slider__radio-3:checked ~ .slider__list .slider__item:nth-child(3) {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .slider__radio-1:checked ~ .slider__list .slider__item:nth-child(1) {
+    display: flex;
+  }
+
+  .slider__radio-2:checked ~ .slider__list .slider__item:nth-child(2) {
+    display: flex;
+  }
+
+  .slider__radio-3:checked ~ .slider__list .slider__item:nth-child(3) {
+    display: flex;
+  }
+
+  .slider__toggles {
+    bottom: 10px;
+  }
+  
+  // and (max-width: @desktop-width) возможно придиется добавить
+}
+
+@media (min-width: @desktop-width) {
+  .slider__toggles {
+    display: none;
+  }
+
+  .slider__radio {
+    display: none;
+  }
+}

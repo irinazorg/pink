@@ -1,0 +1,19 @@
+@tablet-width: 660px;
+@desktop-width: 1200px;
+@modile-tablet-width-only: 1199px;
+
+.main-footer {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .main-footer {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .contacts__links {
+    display: flex;
+    justify-content: space-between;
+  }
+}

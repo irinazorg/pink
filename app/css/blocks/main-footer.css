@@ -1,0 +1,17 @@
+.main-footer {
+  display: none;
+}
+@media (min-width: 660px) {
+  .main-footer {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .contacts__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}

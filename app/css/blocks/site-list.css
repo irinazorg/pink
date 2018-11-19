@@ -1,9 +1,7 @@
 .site-list {
-  margin: 0;
   padding: 0;
+  margin: 0;
   list-style: none;
-  font-weight: bold;
-  text-align: center;
 }
 .site-list a {
   display: block;
@@ -13,6 +11,7 @@
   text-transform: uppercase;
   color: #fff;
   text-decoration: none;
+  text-align: center;
   background-color: #283645;
   border-top: 1px solid #485461;
   border-bottom: 1px solid #010101;
@@ -33,13 +32,42 @@
 }
 @media (min-width: 1200px) {
   .site-list a {
+    position: relative;
     border: none;
     -webkit-box-shadow: none;
     box-shadow: none;
     background-color: transparent;
+    font-weight: 300;
+    font-size: 18px;
+    text-transform: none;
+    padding: 0;
+    padding-top: 38px;
+    padding-bottom: 40px;
   }
   .site-list a[href]:hover {
     background-color: transparent;
     color: #d22856;
+  }
+  .site-list a[href]:active {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  .site-list__item {
+    margin-right: 85px;
+  }
+  .site-list__item:last-child {
+    margin-right: 0;
+  }
+  .site-list__item--active {
+    position: relative;
+  }
+  .site-list__item--active::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 35px;
+    left: 0;
+    height: 2px;
+    background-color: #fff;
   }
 }

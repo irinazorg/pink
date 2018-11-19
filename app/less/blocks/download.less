@@ -4,51 +4,135 @@
 @desktop-width: 1200px;
 
 .download {
-  background-color: #2b3b4b;
-  background-image: url("../img/back-mobile@1x.jpg");
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  margin-bottom: 20px;
+}
+
+.download__slogan {
+  display: none;
+}
+
+.download__wrapper {
+  padding-top: 275px;
+}
+
+.download__link--wrapper {
+  padding-top: 28px;
+  padding-bottom: 31px;
+  background-color: #1d2631;
 }
 
 .download__link {
   display: block;
-  width: 280px;
+  padding: 17px 34px;
+  margin-bottom: 32px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  text-decoration: none;
+  text-align: center;
+  background-color: transparent;
+  border: 3px solid #fff;
+  border-radius: 100px;
 
-  // temporary
-  height: 100px;
-  outline: 2px solid gold;
+  &:hover,
+  &:focus {
+    background-color: #fff;
+    color: #d22856;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
 }
 
 .download__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 280px;
   margin: 0;
+  margin-bottom: 25px;
   padding: 0;
   list-style: none;
+}
 
-  // temporary
-  height: 90px;
-  outline: 2px solid blue;
+.download__item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.download__app {
+  display: block;
+  cursor: pointer;
+}
+
+.download__app--appstore {
+  width: 47px;
+  height: 57px;
+  background-image: url("../img/apple-logo.svg");
+  background-repeat: no-repeat;
+}
+
+.download__app--googleplay {
+  width: 43px;
+  height: 47px;
+  background-image: url("../img/android-logo.svg");
+  background-repeat: no-repeat;
+}
+
+.download__app--windowsmarket {
+  width: 44px;
+  height: 41px;
+  background-image: url("../img/microsoft-logo.svg");
+  background-repeat: no-repeat;
 }
 
 .download__description {
   width: 280px;
-  padding: 0;
-  margin: 0;
-
-  // temporary
-  display: block;
-  height: 81px;
-  outline: 2px solid green;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
-  .download {
-    background-image: url("../img/back-tablet@1x.jpg")
+  .download{
+    margin-bottom: 55px;
+  }
+
+  .download__wrapper {
+    padding-top: 50px;
+  }
+
+  .download__link--wrapper {
+    width: 300px;
+    background-color: transparent;
+  }
+
+  .download__slogan {
+    display: block;
+    width: 192px;
+    padding-left: 54px;
+    padding-right: 54px;
+    margin-bottom: 34px;
+    font-size: 41px;
+    line-height: 49px;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
   }
 
   .download__link {
+    box-sizing: border-box;
     width: 300px;
+    padding: 17px 36px;
+    margin-bottom: 46px;
   }
 
   .download__list {
@@ -57,33 +141,38 @@
 
   .download__description {
     width: 300px;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 100px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .download {
-    margin-top: -110px;
-    background-image: url("../img/back-desktop.jpg");
-    background-size: cover;
+  .download__wrapper {
+    padding-top: 0;
   }
 
-  .bownload__slogan {
-    display: block;
-    padding-top: 200px;
+  .download__slogan {
+    width: 240px;
+    font-size: 50px;
+    line-height: 60px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-bottom: 60px;
   }
 
   .download__link {
-    // temporary
-    min-height: 110px;
+    font-size: 21px;
+    padding-left: 29px;
+    padding-right: 21px;
+    margin-bottom: 67px;
   }
 
   .download__list {
-    // temporary
-    min-height: 120px;
+    margin-bottom: 60px;
   }
 
   .download__description {
-    // temporary
-    min-height: 85px;
+    margin-bottom: 70px;
   }
 }

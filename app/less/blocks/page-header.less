@@ -18,21 +18,21 @@
 
 @media (max-width: @modile-tablet-width-only) {
   .page-header__logo {
-  display: block;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  padding-left: 20px;
-  
-  &:hover .page-header__logo-icon-path,
-  &:focus .page-header__logo-icon-path {
-    fill: #d22856;
-  }
+    display: block;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    padding-left: 20px;
+    
+    &:hover .page-header__logo-icon-path,
+    &:focus .page-header__logo-icon-path {
+      fill: #d22856;
+    }
 
-  &:active .page-header__logo-icon-path {
-    fill: #ffffff;
-    opacity: 0.3;
+    &:active .page-header__logo-icon-path {
+      fill: #ffffff;
+      opacity: 0.3;
+    }
   }
-}
 
 .page-header__nav--opened .page-header__toggle {
   position: relative;
@@ -146,7 +146,7 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
-    background-color: #000;
+    z-index: 100;
   }
 
   .page-header__desctop-container {
