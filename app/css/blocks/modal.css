@@ -1,0 +1,123 @@
+.modal {
+  display: none;
+  position: fixed;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  left: 50%;
+  width: 320px;
+  padding: 44px 20px 52px;
+  margin-left: -160px;
+  background-color: #fff;
+  text-align: center;
+  -webkit-box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+.modal--error {
+  top: 20px;
+}
+.modal--done {
+  bottom: 20px;
+}
+.modal__heading {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+}
+.modal__text {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.modal__button {
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 280px;
+  height: 63px;
+  background-color: #2aab6d;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: #fff;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.modal__button:hover {
+  background-color: #1d9b5e;
+}
+.modal__button:active,
+.modal__button:focus {
+  color: rgba(255, 255, 255, 0.3);
+}
+@media (min-width: 660px) {
+  .modal {
+    width: 460px;
+    padding: 44px 90px 52px;
+    margin-left: -230px;
+  }
+  .modal--done {
+    padding: 0;
+  }
+  .modal__heading {
+    width: 240px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .modal__text {
+    width: 300px;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 300;
+  }
+  .modal__text-wrap {
+    padding: 42px 90px 0 90px;
+  }
+  .modal__button-wrap {
+    padding: 42px 90px;
+    background-color: #f2f2f2;
+  }
+  .modal__button {
+    width: 300px;
+  }
+}
+@media (min-width: 960px) {
+  .modal--done {
+    width: 780px;
+    margin-left: -390px;
+  }
+  .modal__text-wrap {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 45px 160px 0 160px;
+  }
+  .modal--done .modal__heading {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 460px;
+  }
+  .modal--done .modal__text {
+    width: 460px;
+  }
+  .modal__button-wrap {
+    padding: 48px 160px;
+    background-color: #f2f2f2;
+  }
+  .modal--done .modal__button {
+    width: 460px;
+  }
+}

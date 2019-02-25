@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <title>Фотографии</title>
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.min.js" async></script>
 </head>
 <body>
 
@@ -260,7 +265,7 @@
       </div>   
     </section>
 
-     <section class="">
+     <section class="photo-editor">
       <h2 class="visually-hidden">Он-лайн обработка фотографий</h2>
       <p class="photo-editor__description container">
           Затмите их всех! <br>
@@ -268,14 +273,16 @@
       </p>   
       <div class="photo-editor_form-wrap">
         <div class="container">
-          <form cluss="editor-form" action="https://echo.htmlacademy.ru" method="post">
+          <form class="editor-form" action="https://echo.htmlacademy.ru" method="post">
             <picture class="editor-form__img">
+              <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
               <img src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x">
             </picture>
             <div class="editor-form__tools">
-              <input type="radio" id="editor-filter-crop" value="fiter-crop" name="editor-filter" checked>
-              <input type="radio" id="editor-filter-fill" value="fiter-fill" name="editor-filter">
-              <input type="radio" id="editor-filter-contrast" value="fiter-contrast" name="editor-filter">
+              <input type="radio" id="editor-filter-crop" value="filter-crop" name="editor-filter" checked>
+              <input type="radio" id="editor-filter-fill" value="filter-fill" name="editor-filter">
+              <input type="radio" id="editor-filter-contrast" value="filter-contrast" name="editor-filter">
               <div class="editor-form__filter-controls">
                 <label for="editor-filter-crop" class="upload-form__filter-toggle upload-form__filter-toggle--crop">
                   <svg width="48" height="48">
@@ -283,11 +290,39 @@
                   </svg>
                 </label>
                 <label for="editor-filter-fill" class="upload-form__filter-toggle upload-form__filter-toggle--fill">
-                  
+                  <svg width="48" height="48">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-editor-fill"></use>
+                  </svg>
                 </label>
                 <label for="editor-filter-contrast" class="upload-form__filter-toggle upload-form__filter-toggle--contrast">
-                  
+                  <svg width="32" height="32">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-editor-contrast"></use>
+                  </svg>
                 </label>
+              </div>
+              <div class="editor-filter__mobil-only-rage">
+                <div class="editor-filter__mobil-only-rage--control"></div>
+              </div>
+            </div>
+            <div class="editor-filter--wrap">
+              <ul class="editor-filter__controls range">
+                <li class="range__control range__control--crop">
+                   <div class="range__filter range__filter--crop"></div>
+                </li>
+                <li class="range__control range__control--fill">
+                  <div class="range__filter range__filter--fill"></div>
+                </li>
+                <li class="range__control range__control--contrast">
+                  <div class="range__filter range__filter--contrast"></div>
+                </li>
+              </ul>
+              <div class="editor-filter__btn-wrap">
+                <button class="editor-filter__btn btn__pink btn__pink--post" type="button">
+                  Запостить
+                </button>
+                <button class="editor-filter__btn btn__pink btn__pink--cancel" type="button">
+                  Отменить
+                </button>
               </div>
             </div>
           </form>
@@ -296,24 +331,69 @@
     </section>
   </main>
 
-     <footer class="footer-inner">
-      <h2 class="visoally-hidden">Наши социальные сети</h2>
-      <img src="img/footer-logo.png" alt="Pink" class="footer-inner__page-logo" width="147" height="40">
-      <div class="footer-inner__social-list social"> 
-        <ul class="social__list">
-          <li class="social__item">
-            <a href="#" class="social__link social__link--vkontakte">Мы в Вконтакте</a> 
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--facebook">Мы в Facebook</a> 
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--instagram">Мы в Instagram</a> 
-          </li>
-        </ul>
-        <a class="footer-inner__copyright" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      </div> 
-    </footer>
+  <footer class="main-footer footer-inner">
+    <div class="container">
+      <div class="main-footer__wrapper">
+        <div class="contacts__links social">
+          <a class="page-footer__logo" href="index.html">
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               viewBox="0 0 146.3 40.4" enable-background="new 0 0 146.3 40.4" xml:space="preserve" width="147px" height="40px">
+            <g>
+              <path fill="#283645" d="M71.9,18.7c0-0.7,0.6-1.3,1.3-1.3h7.2c5.1,0,8.4,2.7,8.4,7.1v0.1c0,4.9-4.1,7.4-8.9,7.4h-5.5v6.8
+                c0,0.7-0.6,1.3-1.3,1.3c-0.7,0-1.3-0.6-1.3-1.3L71.9,18.7L71.9,18.7z M80,29.6c3.7,0,6.2-2,6.2-5v-0.1c0-3.2-2.4-4.9-6.1-4.9h-5.7
+                v9.9L80,29.6L80,29.6z"/>
+              <path fill="#283645" d="M93.6,18.5c0-0.7,0.6-1.3,1.3-1.3c0.7,0,1.3,0.6,1.3,1.3v20.3c0,0.7-0.6,1.3-1.3,1.3
+                c-0.7,0-1.3-0.6-1.3-1.3V18.5z"/>
+              <path fill="#283645" d="M102.7,18.5c0-0.7,0.6-1.3,1.3-1.3h0.4c0.6,0,0.9,0.3,1.3,0.7l13.7,17.4v-17c0-0.7,0.5-1.3,1.3-1.3
+                c0.7,0,1.2,0.6,1.2,1.3v20.3c0,0.7-0.5,1.2-1.2,1.2h-0.1c-0.5,0-0.9-0.3-1.3-0.8l-14-17.9v17.4c0,0.7-0.5,1.3-1.3,1.3
+                c-0.7,0-1.2-0.6-1.2-1.3L102.7,18.5L102.7,18.5z"/>
+              <path fill="#283645" d="M128.2,18.5c0-0.7,0.6-1.3,1.3-1.3c0.7,0,1.3,0.6,1.3,1.3v12.3l12.8-13.2c0.3-0.3,0.6-0.5,1-0.5
+                c0.7,0,1.2,0.6,1.2,1.3c0,0.4-0.2,0.6-0.4,0.9l-8,7.9l8.6,10.6c0.2,0.3,0.4,0.5,0.4,0.9c0,0.7-0.6,1.3-1.3,1.3
+                c-0.5,0-0.8-0.3-1-0.6L135.6,29l-4.9,4.9v4.9c0,0.7-0.6,1.3-1.3,1.3c-0.7,0-1.3-0.6-1.3-1.3L128.2,18.5L128.2,18.5z"/>
+            </g>
+            <path fill="#FFFFFF" d="M60.5,28.3"/>
+            <path fill="#D22856" d="M60.5,28c0,0-5.2-21.4-5.2-21.4C54.9,4.3,52.7,0,46.7,0c-0.8,0-1.5,0.7-1.5,1.5S45.9,3,46.7,3
+              c4.9,0,5.6,3.7,5.6,4.1l4.8,19.7H55c-0.7-5.9-5.8-10.5-11.9-10.5s-11.2,4.6-11.9,10.5h-1.8c-0.7-5.9-5.8-10.5-11.9-10.5
+              S6.2,20.9,5.5,26.8H3.4L8.2,7.1C8.3,6.7,9,3,13.8,3c0.8,0,1.5-0.7,1.5-1.5S14.7,0,13.8,0c-6,0-8.2,4.3-8.6,6.7
+              c0,0-5.2,21.4-5.2,21.4c-0.3,1.1,0.5,1.8,1.4,1.8c0,0,0,0,0,0h4c0.7,5.9,5.8,10.5,11.9,10.5s11.2-4.6,11.9-10.5h1.8
+              c0.7,5.9,5.8,10.5,11.9,10.5S54.3,35.8,55,29.8h4c0,0,0,0,0,0C59.9,29.8,60.7,29.1,60.5,28z M26.3,29.8c-0.7,4.3-4.4,7.5-8.9,7.5
+              s-8.2-3.3-8.9-7.5c-0.1-0.5-0.1-1-0.1-1.5c0-0.5,0.1-1,0.1-1.5c0.7-4.3,4.4-7.5,8.9-7.5s8.2,3.3,8.9,7.5c0.1,0.5,0.1,1,0.1,1.5
+              C26.5,28.9,26.4,29.4,26.3,29.8z M52,29.8c-0.7,4.3-4.4,7.5-8.9,7.5c-4.5,0-8.2-3.3-8.9-7.5c-0.1-0.5-0.1-1-0.1-1.5
+              c0-0.5,0.1-1,0.1-1.5c0.7-4.3,4.4-7.5,8.9-7.5c4.5,0,8.2,3.3,8.9,7.5c0.1,0.5,0.1,1,0.1,1.5C52.1,28.9,52.1,29.4,52,29.8z"/>
+            </svg>
+          </a>
+          <ul class="contacts__social-list social-list">
+            <li class="social__item">
+              <a href="" class="social__link social__link--twitter">
+                <span class="visually-hidden">Twitter</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="" class="social__link social__link--facebook">
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="" class="social__link social__link--youtube">
+                <span class="visually-hidden">Youtube</span>
+              </a>
+            </li>
+          </ul>
+          <div class="contacts__copyright copyright">
+            <b class="copyright__text">
+               Разрботано
+            </b>
+            <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">HTML Academy</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
 
   <script>
     var navMain = document.querySelector('.main-nav');

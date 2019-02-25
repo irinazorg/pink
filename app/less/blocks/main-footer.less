@@ -1,19 +1,30 @@
 @tablet-width: 660px;
-@desktop-width: 1200px;
-@modile-tablet-width-only: 1199px;
+@desktop-width: 960px;
+@modile-tablet-width-only: 959px;
 
 .main-footer {
-  display: none;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.page-footer__logo {
+  margin-bottom: 40px;
 }
 
 @media (min-width: @tablet-width) {
   .main-footer {
     display: block;
     margin-bottom: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .contacts__links {
     display: flex;
     justify-content: space-between;
+  }
+
+  .page-footer__logo {
+    margin-bottom: 0;
   }
 }

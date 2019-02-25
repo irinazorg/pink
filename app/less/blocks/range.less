@@ -1,0 +1,112 @@
+@tablet-width: 660px;
+@desktop-width: 960px;
+
+@media (min-width: @tablet-width) {
+  .range {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .range__control {
+    position: relative;
+    width: 276px;
+    min-height: 46px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    background-position: left top 11px;
+    background-repeat: no-repeat; 
+    border-bottom: 1px solid #dddfe0;
+
+    &--crop {
+      background-image: url("../img/icon-editor-crop.svg");
+      background-size: 22px 22px;
+    }
+
+    &--fill {
+      background-image: url("../img/icon-editor-fill.svg");
+      background-size: 24px 22px;
+    }
+
+    &--contrast {
+      background-image: url("../img/icon-editor-contrast.svg");
+      background-size: 16px 16px;
+      background-position: left top 14px;
+    }
+  }
+
+  .range__filter {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 55px;
+    margin-right: 18px;
+    margin-bottom: 20px;
+    width: 202px;
+    height: 2px;
+    background-color: #283645;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border: 2px solid #d22856;
+      border-radius: 50%;
+      background-color: #fff;
+      top: -6px;
+      cursor: pointer;
+    }
+
+    &--crop::after {
+      right: 15%;
+    }
+
+    &--fill::after {
+      right: 85%;
+    }
+
+    &--contrast::after {
+      right: 45%;
+    }
+
+    &:hover::after {
+      background-color: #d22856;
+    }
+    
+    &:active::after {
+      background-color: #d22856;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .range__control {
+    width: 410px;
+    min-height: 73px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    background-position: left top 11px;
+    background-repeat: no-repeat; 
+    border-bottom: 1px solid #dddfe0;
+
+    &--crop {
+      background-size: 48px 48px;
+    }
+
+    &--fill {
+      background-size: 48px 48px;
+    }
+
+    &--contrast {
+      background-size: 32px 32px;
+      background-position: left center;
+    }
+  }
+
+  .range__filter {
+    width: 288px;
+    margin-top: 36px;
+    margin-left: 92px;
+    margin-right: 30px;
+    margin-bottom: 34px;
+  }
+}
