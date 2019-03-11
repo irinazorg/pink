@@ -502,7 +502,7 @@ template {
   color: rgba(255, 255, 255, 0.3);
 }
 .btn__pink--cancel {
-  color: #dddfe0;
+  color: #ffffff;
   border-color: #dddfe0;
 }
 .btn__pink--cancel:hover {
@@ -3012,7 +3012,7 @@ input[name="user-operation-sistem"]:disabled ~ .form__radio:hover::before {
     justify-content: space-between;
   }
   .form__contacts .form__line {
-    width: 375px;
+    width: 100%;
   }
   .form__achieves {
     position: relative;
